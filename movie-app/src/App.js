@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import { getMovieByName, getMovieById } from './utilities/utils.js'
+// require('dotenv').config();
 
 function App() {
+
+
   return (
     <div className="App">
       <header className="App-header">
