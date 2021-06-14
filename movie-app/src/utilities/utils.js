@@ -1,6 +1,3 @@
-// Define getMoviesByName, takes string as input, uses fetch and async/aawait to get an array of movies with matching title
-// Define another arrow function called getMovieDetailById, fetch by valid id
-
 const API_KEY = process.env.REACT_APP_OMDB_API;
 
 const makeJSON = async url => {
