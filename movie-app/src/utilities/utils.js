@@ -8,11 +8,12 @@ const makeJSON = async url => {
         .then(res => res.json())
         .then(data => data)
         .catch(err => console.error(err));
+        return response;
 }
 
 export const getMovieByName = movie_title => {
     const base_url = `http://www.omdbapi.com/?t=${movie_title}&apikey=${API_KEY}`;
-    makeJSON(base_url);
+    return makeJSON(base_url);
 }
 export const getMoviesById = movieID => {
     const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`;
