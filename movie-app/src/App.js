@@ -1,27 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-import { getMovieByName, getMovieById } from './utilities/utils.js'
-// require('dotenv').config();
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import MovieCard from "./Components/MovieCard";
+import { getMovieByName } from "./utilities/utils";
 
 function App() {
+  const [movie, setMovie] = useState({});
 
+  useEffect(() => {
+    getMovieByName("kung pow").then((res) => setMovie(res));
+  }, []);
 
+  console.log(movie);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MovieCard
+        title={movie.Title}
+        posterUrl={movie.Poster}
+        type={movie.Type}
+      />
     </div>
   );
 }
