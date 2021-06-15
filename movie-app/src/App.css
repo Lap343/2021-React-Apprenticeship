@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .movie-card-parent {
   width: 100vw;
   padding-bottom: 5rem;
@@ -39,4 +45,40 @@
 .genre-heading,
 .title-heading {
   color: white;
+}
+
+.main-container {
+  margin-right: 150px;
+  border:solid #ccc 2px;
+  border-radius: 5px;
+  background-color: rgb(217, 245, 255);
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-image{
+  width: 50%;
+}
+
+.modal-info{
+  width: 50%;
+  margin-left: 20px;
+}
+
+.modal-buttons {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color:#ccc;
+}
+
+
+.modal-rating {
+  color: rgb(54, 115, 220);
+  margin: 20px;
+  font-size: 30px;
 }
