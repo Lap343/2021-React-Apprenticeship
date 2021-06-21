@@ -9,14 +9,13 @@ const makeJSON = async url => {
 }
 
 export const getMovieByName = movie_title => {
-    const base_url = `http://www.omdbapi.com/?t=${movie_title}&apikey=${API_KEY}`;
+    const base_url = `http://www.omdbapi.com/?s=${movie_title}&apikey=${API_KEY}`;
     return makeJSON(base_url);
 }
 export const getMoviesById = movieID => {
     const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`;
     makeJSON(apiURL);
-
 }
 
-getMoviesById('tt3896198');
-getMovieByName('batman');
+
+
