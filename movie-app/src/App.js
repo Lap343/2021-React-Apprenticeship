@@ -1,8 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import MovieCard from "./Components/MovieCard";
-import MovieDetails from "./Components/MovieDetails";
+import MovieCard from "./components/MovieCard";
+import MovieDetails from "./components/MovieDetails";
 import { getMovieByName } from "./utilities/utils";
+
 
 function App() {
   const [movie, setMovie] = useState({});
@@ -12,7 +13,9 @@ function App() {
   }, []);
 
   return (
+
     <div className="App">
+
       <MovieCard
         title={movie.Title}
         posterUrl={movie.Poster}

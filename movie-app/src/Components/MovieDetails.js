@@ -1,6 +1,4 @@
-
 import PropTypes from 'prop-types';
-
 
 const MovieDetails = props => {
     return (
@@ -34,6 +32,7 @@ const MovieDetails = props => {
         </div>
     )
 }
+
 MovieDetails.propTypes = {
   title: PropTypes.string,
   rating: PropTypes.string,
