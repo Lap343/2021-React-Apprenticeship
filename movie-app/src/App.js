@@ -1,9 +1,11 @@
-import "./App.css";
+import "./scss/main.scss";
 import React, { useState, useEffect } from "react";
-import MovieCard from "./components/MovieCard";
-import MovieDetails from "./components/MovieDetails";
+import MovieCard from "./Components/MovieCard";
+import MovieDetails from "./Components/MovieDetails";
 import { getMovieByName } from "./utilities/utils";
-
+import NavBar from "./header/NavBar";
+import Searched from './body/Searched';
+import Home from './body/Home';
 
 function App() {
   const [movie, setMovie] = useState({});
@@ -13,27 +15,8 @@ function App() {
   }, []);
 
   return (
-
     <div className="App">
-
-      <MovieCard
-        title={movie.Title}
-        posterUrl={movie.Poster}
-        type={movie.Type}
-      />
-
-      <MovieDetails
-      title={movie.Title}
-      posterUrl={movie.Poster}
-      type={movie.Type}
-      rated={movie.Rated}
-      runtime={movie.Runtime}
-      genre={movie.Genre}
-      plot={movie.Plot}
-      actors={movie.Actors}
-      rating={movie.imdbRating}
-      director={movie.Director}
-      />
+      <NavBar />
     </div>
   );
 }

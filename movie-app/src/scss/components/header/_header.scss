@@ -1,0 +1,44 @@
+.header {
+  width: 100vw;
+}
+
+.navigation {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top:50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+}
+
+.searchbar {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.hero {
+  background-color: pink;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  &-text {
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  &-line {
+    width: 150px;
+    height: 10px;
+    background-color: #333;
+  }
+}
+
+.logo {
+  width: 400px;
+}
+@import "./_searchbar";

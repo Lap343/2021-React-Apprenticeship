@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .movie-card-parent {
   width: 100vw;
@@ -49,7 +49,7 @@
 
 .main-container {
   margin-right: 150px;
-  border:solid #ccc 2px;
+  border: solid #ccc 2px;
   border-radius: 5px;
   background-color: rgb(217, 245, 255);
 }
@@ -59,11 +59,11 @@
   flex-direction: row;
 }
 
-.modal-image{
+.modal-image {
   width: 50%;
 }
 
-.modal-info{
+.modal-info {
   width: 50%;
   margin-left: 20px;
 }
@@ -73,9 +73,8 @@
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
-  background-color:#ccc;
+  background-color: #ccc;
 }
-
 
 .modal-rating {
   color: rgb(54, 115, 220);
