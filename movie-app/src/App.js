@@ -1,41 +1,21 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
-import MovieCard from "./components/MovieCard";
-import MovieDetails from "./components/MovieDetails";
+import "./App.css";
 import { getMovieByName } from "./utilities/utils";
+import Searched from './body/Searched';
 
 
 function App() {
   const [movie, setMovie] = useState({});
 
-  useEffect(() => {
+  useEffect(()=>{
     getMovieByName("batman").then((res) => setMovie(res));
-  }, []);
+  },[])
 
   return (
-
-    <div className="App">
-
-      <MovieCard
-        title={movie.Title}
-        posterUrl={movie.Poster}
-        type={movie.Type}
-      />
-
-      <MovieDetails
-      title={movie.Title}
-      posterUrl={movie.Poster}
-      type={movie.Type}
-      rated={movie.Rated}
-      runtime={movie.Runtime}
-      genre={movie.Genre}
-      plot={movie.Plot}
-      actors={movie.Actors}
-      rating={movie.imdbRating}
-      director={movie.Director}
-      />
+    <div>
+      <Searched movies={movie.Search} />
     </div>
   );
 }
 
-export default App;
+export default App; 
