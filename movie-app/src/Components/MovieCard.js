@@ -7,7 +7,6 @@ const MovieCard = ({movie}) => {
   }
 
   const [cardHover, setCardHover] = useState(false);
-// when true, apply show info animation
   const showInfoOnHover = () => {
     setCardHover(!cardHover)
   }
