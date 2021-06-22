@@ -82,7 +82,7 @@
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
-// Info animation
+
 @keyframes show {
     from {
         opacity: 1;
@@ -92,7 +92,6 @@
     }
 }
 
-// Info animation
 @keyframes hide {
     from {
         opacity: 0;
