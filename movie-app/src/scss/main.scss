@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+@import "components/header/header";
+@import "components/body/_search_results";
+
+// // .movie-card-parent
+//   {
+// //   width: 100v
+//   ;
+// //   padding-bottom: 5re
+//   ;
+// //   padding-left: 5re
+//   ;
+// //   display: fle
+//   ;
+// //   flex-wrap: wra
+//   ;
+// //
+
+// // .card
+//   {
+// //   margin-right: 5re
+//   ;
+// //   margin-top: 1re
+//   ;
+// //
+
+// // .movie-img
+//   {
+// //   width: 300p
+//   ;
+// //   height: 450p
+//   ;
+// //   background-color: re
+//   ;
+// //   background-size: cove
+//   ;
+// //
+
+// // .movie-information
+//   {
+// //   padding: 1re
+//   ;
+// //   width: 300p
+//   ;
+// //   background-color: #1a1a1
+//   ;
+// //   width:
+//   ;
+// //
+
+// // .title
+//   {
+// //   margin-bottom: 10p
+//   ;
+// //   font-size: 1re
+//   ;
+// //
+
+// // .genre-headin
+//   ,
+// // .title-heading
+//   {
+// //   color: whit
+//   ;
+// //
+
+// // .main-container
+//   {
+// //   margin-right: 150p
+//   ;
+// //   border: solid #ccc 2p
+//   ;
+// //   border-radius: 5p
+//   ;
+// //   background-color: rgb(217, 245, 255
+//   ;
+// //
+
+// // .flex
+//   {
+// //   display: fle
+//   ;
+// //   flex-direction: ro
+//   ;
+// //
+
+// // .modal-image
+//   {
+// //   width: 50
+//   ;
+// //
+
+// // .modal-info
+//   {
+// //   width: 50
+//   ;
+// //   margin-left: 20p
+//   ;
+// //
+
+// // .modal-buttons
+//   {
+// //   display: inline-bloc
+//   ;
+// //   padding: 5p
+//   ;
+// //   margin: 5p
+//   ;
+// //   border-radius: 10p
+//   ;
+// //   background-color: #cc
+//   ;
+// //
+
+// // .modal-rating
+//   {
+// //   color: rgb(54, 115, 220
+//   ;
+// //   margin: 20p
+//   ;
+// //   font-size: 30p
+//   ;
+// // ;
