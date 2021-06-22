@@ -36,7 +36,6 @@
     opacity: 0;
 }
 
-// Overlay container will move up 150px
 .overlay-show {
     animation-name: translate-up;
     animation-duration: 0.7s;
@@ -44,7 +43,6 @@
     animation-fill-mode: forwards;
 }
 
-// Overlay container will move back to its original position
 .overlay-hide {
     animation-name: translate-down;
     animation-duration: 0.7s;
@@ -52,7 +50,6 @@
     animation-fill-mode: forwards;
 }
 
-// Overlay Animation
 @keyframes translate-down {
     from {
         transform: translateY(150px);
