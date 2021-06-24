@@ -1,4 +1,4 @@
-import MovieCard from '../Components/MovieCard'
+import MovieCard from '../components/MovieCard'
 
 const Searched = ({ movies }) => {
     const moviesCheck = () => {

@@ -7,6 +7,15 @@ const NavBar = ({ movieSearch, setMovieSearch }) => {
     document.getElementById("input").value = "";
   };
 
+  const titleChecker = (e) => {
+    e.preventDefault();
+    if (e.target[0].value.length < 3) {
+      alert("Please search a movie title with more than two letters");
+    } else {
+      setMovieSearch(e.target[0].value);
+    }
+  };
+
   return (
     <div className="header">
       <nav className="navigation">
@@ -23,14 +32,7 @@ const NavBar = ({ movieSearch, setMovieSearch }) => {
                 ? `search-open`
                 : `search-close`
             }
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (e.target[0].value.length < 3) {
-                alert("Please search a movie title with more than two letters");
-              } else {
-                setMovieSearch(e.target[0].value);
-              }
-            }}
+            onSubmit={(e) => titleChecker(e)}
           >
             <img
               onClick={() => {
@@ -47,13 +49,13 @@ const NavBar = ({ movieSearch, setMovieSearch }) => {
             ></input>
             <button
               type="button"
-              onClick={(e) => {
+              onClick={() => {
                 setSearchOpen(false);
                 clearText();
               }}
               className={searchOpen ? "button-show" : "button-hide"}
             >
-              <img className='button-img' alt='' src="./cancel.svg" />
+              <img className="button-img" alt="" src="./cancel.svg" />
             </button>
           </form>
         </div>
