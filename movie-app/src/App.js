@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <NavBar movieValue={movieSearch} setMovieSearch={setMovieSearch} />
-      {movieSearch === undefined ?  <Home/>  :  (movie.Search ?  <Searched movies={movie.Search} />  :  <h2> Please enter a valid movie title </h2>) }
+      {movieSearch ? (movie.Search ? <Searched movies={movie.Search} /> : <h2> Please enter a valid movie title </h2>) : <Home/>}
     </div>
 
   );
