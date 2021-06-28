@@ -8,13 +8,13 @@ const makeJSON = async url => {
         return response;
 }
 
-export const getMovieByName = movie_title => {
+export const getMoviesByName = movie_title => {
     const base_url = `http://www.omdbapi.com/?s=${movie_title}&apikey=${API_KEY}`;
     return makeJSON(base_url);
 }
-export const getMoviesById = movieID => {
+export const getMovieById = movieID => {
     const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`;
-    makeJSON(apiURL);
+    return makeJSON(apiURL);
 }
 
 

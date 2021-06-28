@@ -52,6 +52,7 @@ const NavBar = ({ movieSearch, setMovieSearch }) => {
               onClick={() => {
                 setSearchOpen(false);
                 clearText();
+                setMovieSearch();
               }}
               className={searchOpen ? "button-show" : "button-hide"}
             >
