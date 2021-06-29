@@ -1,17 +1,53 @@
 .search-container {
-    width: 100vw;
-    display: grid;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 5%;
-    padding-right:5%;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+  width: 100vw;
+  display: grid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
-.home-titles {
- padding: 3rem 0 3rem 5.7rem;
+.back-button {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  background-color: white;
+  margin: 1rem;
+  box-shadow: 2px 2px 5px 3px grey;
+}
+
+.hide-back-button {
+  display: none;
+}
+
+.page-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-page-btn {
+  height: 75%;
+  width: 75%;
+  padding-top: 0.2rem;
+}
+
+.back-page-btn {
+  border-radius: 50%;
+  height: 75%;
+  width: 75%;
+  transform: rotate(180deg);
+  padding-bottom: 0.2rem;
+}
+
+.page-number {
+  padding: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 @import "./_card";
