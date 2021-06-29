@@ -77,7 +77,6 @@ textarea:focus, input:focus{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: green;
 }
 
 .button-hide{
@@ -128,13 +127,14 @@ textarea:focus, input:focus{
 }
 
 .hero {
-  background-color: pink;
+  
   padding-left: 5%;
   padding-right: 5%;
 
   &-text {
-    line-height: 35px;
+    line-height: 45px;
     margin-bottom: 20px;
+    font-size: 2rem;
   }
 
   &-line {
