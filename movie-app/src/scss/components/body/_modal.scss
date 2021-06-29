@@ -1,13 +1,13 @@
 //........................................................................
 
 // Add Keyframes to hide and show the modal
-// Show modal should be toggled by the movie card button 
+
 
 //........................................................................
 .modal-container {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(44, 42, 42, 0.5);
     position: fixed;
     display: flex;
     justify-content: center;
@@ -17,44 +17,125 @@
 
 .modal {
     padding: 20px;
-    background-color: white;
+    background-color:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 8px 24px #d7d7d7;
+    position: relative;
+    animation: 0.7s ease 0s 1 normal forwards running move-up;
 
     &-poster {
         margin-right: 10px;
         width: 400px;
         height: 600px;
-        background-color: blue;
+        background-size: cover;
     }
 
     &-info {
         margin-left: 10px;
         width: 500px;
         height: 600px;
-        background-color: red;
         display: flex;
+        background-color: #e5e5e5;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 }
 
-.info-title, .info-tags, .info-actors, .info-plot {
-    background-color: white;
-    margin: 5px;
-    height: 20%;
+.modal-poster-dimmer {
+    background-color: #333;
+}
+
+.info-title, 
+.info-tags,
+.info-directors, 
+.info-actors, 
+.info-plot,
+.info-time,
+.info-rating {
+    margin-top: 20px;
     width: 90%;
 }
 
-.hide-modal {
-    opacity: 0;
-    display: hidden;
+.info-tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .tag-bubble {
+        padding: 10px 15px;
+        background-color: #ccc;
+        margin-right: 5px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+}
+
+.info-rating {
+    display: flex;
+}
+
+.rating-container {
+    display: flex;
+    margin-right: 15px;
+}
+
+.rating-tag {
+    background-color: #ccc;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+.rating-logo {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.info-plot {
+    height: auto;
+}
+
+.info-time {
+    background-color: #fff;
+}
+// General Styling
+.info-subheading {
+    margin-bottom: 5px;
+}
+
+// Functionality
+.close-modal {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(15px) translateY(-15px);
+
 }
 
 .show-modal {
-    opacity: 1;
-    display: flex;
+  display: flex;
+  opacity: 1;
 }
+
+.hide-modal {
+    display: none;
+    opacity: 0;
+}
+
+// Animations
+@keyframes move-up {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+

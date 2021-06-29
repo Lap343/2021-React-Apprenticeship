@@ -14,7 +14,7 @@ export const getMovieByName = movie_title => {
 }
 export const getMoviesById = movieID => {
     const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`;
-    makeJSON(apiURL);
+    return makeJSON(apiURL);
 }
 
 

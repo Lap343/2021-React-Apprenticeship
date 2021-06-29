@@ -3,22 +3,26 @@ import React, { useState, useEffect } from "react";
 import { getMovieByName } from "./utilities/utils";
 import NavBar from "./header/NavBar";
 import Searched from './body/Searched';
-import Home from './body/Home';
-
 
 
 function App() {
   const [movie, setMovie] = useState({});
+  const [movieSearch, setMovieSearch] = useState("batman");
 
-  useEffect(()=>{
-    getMovieByName("batman").then((res) => setMovie(res));
-  },[])
+  useEffect(() => {
+    getMovieByName(movieSearch).then((res) => setMovie(res));
+  }, [movieSearch])
+
+  
 
   return (
     <div className="App">
-      <NavBar />
-      <Searched movies={movie.Search} />
+      <NavBar movieValue={movieSearch} setMovieSearch={setMovieSearch} />
+
+      {movie.Search ?  <Searched movies={movie.Search} />  :  <h2> Please enter a valid movie title </h2> }
+      
     </div>
+
   );
 }
 
