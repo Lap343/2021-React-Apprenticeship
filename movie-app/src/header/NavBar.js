@@ -45,7 +45,7 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
     <div className="header">
       <nav className="navigation">
         <div className="logo-container">
-          <img src={"./logo.svg"} alt="ToadTv logo" className="logo" />
+          <img src={"logo.png"} alt="ToadTv logo" className="logo"  />
         </div>
         <form onSubmit={(e) => titleChecker(e)}>
           <div 
