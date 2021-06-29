@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getMoviesById } from '../utilities/utils';
+import { getMovieById } from '../utilities/utils';
 import cancelIcon from '../assets/cancel.svg';
 import tomato from '../assets/rottentomatoes.png'
 import metacritic from '../assets/metacritic.png'
@@ -14,7 +14,7 @@ const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
     const [targetMovie, setTargetMovie] = useState({})
 
     useEffect(() => {
-        getMoviesById(selected).then(movieData => setTargetMovie(movieData));
+        getMovieById(selected).then(movieData => setTargetMovie(movieData));
     }, [selected])
 
     const {
