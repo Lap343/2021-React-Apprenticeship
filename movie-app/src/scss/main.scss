@@ -7,6 +7,8 @@
 .App {
   display: flex;
   flex-direction: column;
+  background: rgb(137,207,240);
+background: linear-gradient(rgba(137,207,240,.9) 0%, rgba(239,237,229,1) 25%);
 }
 
 @import "components/header/header";
