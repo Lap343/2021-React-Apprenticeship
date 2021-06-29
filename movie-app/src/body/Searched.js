@@ -1,15 +1,7 @@
 import MovieCard from '../components/MovieCard'
-import { useState } from 'react';
 import MovieDetails from '../components/MovieDetails'
 
-const Searched = ({ totalResults, movies, setPage, page }) => {
-    // State variable for fetching a movie object with the same ID(selected) as the card 
-    const [selected, setSelected] = useState('');
-    const [modalOpen, setModalOpen] = useState(false)
-    // handle modal events
-    const toggleModal = () => {
-        setModalOpen(!modalOpen);
-    };
+const Searched = ({ totalResults, movies, setPage, page, toggleModal, selected, setSelected, modalOpen, setModalOpen, detailClick }) => {
 
     const moviesCheck = () => {
         if (movies) {
@@ -19,6 +11,7 @@ const Searched = ({ totalResults, movies, setPage, page }) => {
                     key={movie.imdbID}
                     movie={movie}
                     setSelected={setSelected}
+                    detailClick={detailClick}
                 />;
             });
         } else {
