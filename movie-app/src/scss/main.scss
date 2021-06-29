@@ -9,7 +9,18 @@
 .App {
   display: flex;
   flex-direction: column;
+  background: rgb(137, 207, 240);
+  background: linear-gradient(
+    rgba(137, 207, 240, 0.9) 0%,
+    rgba(239, 237, 229, 1) 25%
+  );
+  height: 100vh;
+
+  .error-text {
+    margin: 3rem 0 0.5rem 5%;
+  }
 }
+
 //........................................................................
 
 @import "components/header/header";
