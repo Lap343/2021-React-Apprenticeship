@@ -10,16 +10,16 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
     document.getElementById("input").value = "";
   };
 
-  const titleChecker = (e) => {
-    e.preventDefault();
-    if (e.target[0].value.length < 3) {
+  //Get title checker to be able to be fired from the search button and entered with input
+  const titleChecker = (input) => {
+    if ( cherryPopped && input.length < 3 ){
       alert("Please search a movie title with more than two letters");
     } else {
-      setMovieSearch(e.target[0].value);
+      setMovieSearch(input);
     }
   };
 
-  const openSwitch = (e) => {
+  const openSwitch = () => {
     setActive(true);
     setCherryPopped(true);
   }
@@ -47,12 +47,16 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
         <div className="logo-container">
           <img src={"logo.png"} alt="ToadTv logo" className="logo"  />
         </div>
-        <form onSubmit={(e) => titleChecker(e)}>
+        <form id="search-form" onSubmit={(e) => {
+          e.preventDefault(); 
+          titleChecker(e.target[0].value);
+        }}>
           <div 
             onClick={openSwitch} 
             className={applyStyles(`btn`)}
           >
             <img 
+              //Get the onClick to work 
               onClick={openSwitch} 
               className="btn-el_search" 
               src={search}  
