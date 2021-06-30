@@ -12,7 +12,6 @@ const NavBar = ({ setPage, movieSearch, setMovieSearch }) => {
 
   const clearText = () => {
     setSearchString('')
-    // document.getElementById("input").value = "";
   };
 
   const titleChecker = (input) => {
