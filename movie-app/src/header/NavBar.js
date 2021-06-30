@@ -4,14 +4,14 @@ import search from '../assets/search-magnify.svg';
 
 const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
   const [active, setActive] = useState(false);
-  const [cherryPopped, setCherryPopped] = useState(false);
+  const [firstClick, setFirstClick] = useState(false);
 
   const clearText = () => {
     document.getElementById("input").value = "";
   };
 
   const titleChecker = (input) => {
-    if ( cherryPopped && input.length < 3 ){
+    if ( firstClick && input.length < 3 ){
       alert("Please search a movie title with more than two letters");
     } else {
       setMovieSearch(input);
@@ -20,7 +20,7 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
 
   const openSwitch = () => {
     setActive(true);
-    setCherryPopped(true);
+    setFirstClick(true);
   }
 
   const closeSwitch = (e) => {
@@ -31,7 +31,7 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
   const applyStyles = (el) => {
     const styleApplier = () => {
       let currStyle = `btn-el_${el}`;
-      if(cherryPopped) {
+      if(firstClick) {
         if(active) { return currStyle + ` sidexside_${el}` } 
         if(!active) { return currStyle +  ` stacked_${el}`}
       }
