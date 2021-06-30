@@ -45,10 +45,12 @@ function App() {
             modalOpen={modalOpen}
             setModalOpen={setModalOpen}
           />
-        ) 
-        : 
+        )
+        :
         (
+         <div className="error-container">
           <h2 className="error-text"> Please enter a valid movie title </h2>
+          </div>
         )
       ) : (
         <Home
