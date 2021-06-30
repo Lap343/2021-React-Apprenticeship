@@ -2,72 +2,6 @@
   width: 100vw;
 }
 
-.search-icon{
-  height: 45px;
-  width: 45px;
-  display: inline;
-  margin: 10px 0 0 10px;
-  padding-top: 5px;
-}
-
-textarea:focus, input:focus{
-  outline: none;
-}
-
-.initial {
-  height: 70px;
-  width: 70px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0px 8px 24px #d7d7d7;
-  border-radius: 50px;
-}
-
-.search-open {
-  height: 70px;
-  width: 70px;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 24px #d7d7d7;
-  animation-name: open;
-  animation-duration: 0.7s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  font-size: 3rem;
-}
-
-.search-close {
-  height: 70px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0px 8px 24px #d7d7d7;
-  animation-name: close;
-  animation-duration: 0.7s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes open {
-  0% {
-      width: 80px;
-      border-radius: 50px;
-  }
-  100% {
-      width: 500px;
-      border-radius: 25px;
-  }
-}
-
-@keyframes close {
-  0% {
-      width: 500px;
-      border-radius: 25px;
-  }
-  100% {
-      width: 70px;
-      border-radius: 50px;
-  }
-}
-
 .navigation {
   width: 100%;
   padding-left: 5%;
@@ -79,72 +13,8 @@ textarea:focus, input:focus{
   align-items: center;
 }
 
-.button-hide{
-  display: none;
-}
-
-.button-show{
-  display: inline;
-  border: none;
-  background-color: transparent;
-  animation-name: fade;
-  animation-duration: 0.7s;
-}
-
-.search-bar {
-  width: 73%;
-  height: 80%;
-  border: none;
-  background-color: transparent;
-  font-size: 3rem;
-  margin-left: 10px;
-  border-left: solid lightgrey 1px;
-  border-right: solid lightgrey 1px;
-  animation-name: fade;
-  animation-duration: 0.7s;
-  justify-content: center;
-  padding: 0 10px 0 15px;
-}
-
-.button-img{
-  height: 55px;
-  width: 55px;
-  padding: 15px 0 0 7px;
-  visibility: show;
-  animation-name: fade;
-  animation-duration: 0.7s;
-}
-
-@keyframes fade {
-  0% {visibility: hidden; border-left: solid transparent 0px; border-right: solid transparent 0px}
-  95% {visibility: hidden; border-left: solid transparent 0px; border-right: solid transparent 0px}
-  100% {visibility: show;}
-}
-
-
-.search-bar-close{
-  display: none;
-}
-
-.hero {
-  
-  padding-left: 5%;
-  padding-right: 5%;
-
-  &-text {
-    line-height: 45px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-  }
-
-  &-line {
-    width: 150px;
-    height: 10px;
-    background-color: #333;
-  }
-}
-
 .logo {
   width: 400px;
 }
+
 @import "./_searchbar";

@@ -29,8 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar movieValue={movieSearch} setMovieSearch={setMovieSearch} />
-      {movieSearch ? (
+      <NavBar pageSet={setPage} movieValue={movieSearch} setMovieSearch={setMovieSearch} />
+      {
+      movieSearch ? (
         movie.Search ? (
           <Searched
             detailClick={detailClick}
@@ -44,8 +45,10 @@ function App() {
             modalOpen={modalOpen}
             setModalOpen={setModalOpen}
           />
-        ) : (
-          <h2> Please enter a valid movie title </h2>
+        ) 
+        : 
+        (
+          <h2 className="error-text"> Please enter a valid movie title </h2>
         )
       ) : (
         <Home
@@ -56,14 +59,6 @@ function App() {
           toggleModal={toggleModal}
           detailClick={detailClick}
         />
-
-          />
-        ) : (
-          <h2 className="error-text"> Please enter a valid movie title </h2>
-        )
-      ) : (
-        <Home />
-
       )}
     </div>
   );

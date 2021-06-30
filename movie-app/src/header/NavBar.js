@@ -1,20 +1,44 @@
 import { useState } from "react";
+import cancel from '../assets/search-cancel.svg';
+import search from '../assets/search-magnify.svg';
 
-const NavBar = ({ movieSearch, setMovieSearch }) => {
-  const [searchOpen, setSearchOpen] = useState();
+const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
+  const [active, setActive] = useState(false);
+  const [cherryPopped, setCherryPopped] = useState(false);
 
   const clearText = () => {
     document.getElementById("input").value = "";
   };
 
-  const titleChecker = (e) => {
-    e.preventDefault();
-    if (e.target[0].value.length < 3) {
+  const titleChecker = (input) => {
+    if ( cherryPopped && input.length < 3 ){
       alert("Please search a movie title with more than two letters");
     } else {
-      setMovieSearch(e.target[0].value);
+      setMovieSearch(input);
     }
   };
+
+  const openSwitch = () => {
+    setActive(true);
+    setCherryPopped(true);
+  }
+
+  const closeSwitch = (e) => {
+    e.stopPropagation();
+    setActive(false)
+  }
+
+  const applyStyles = (el) => {
+    const styleApplier = () => {
+      let currStyle = `btn-el_${el}`;
+      if(cherryPopped) {
+        if(active) { return currStyle + ` sidexside_${el}` } 
+        if(!active) { return currStyle +  ` stacked_${el}`}
+      }
+      return currStyle;
+    }
+    return styleApplier();
+  }
 
   return (
     <div className="header">
@@ -22,55 +46,46 @@ const NavBar = ({ movieSearch, setMovieSearch }) => {
         <div className="logo-container">
           <img src={"logo.png"} alt="ToadTv logo" className="logo"  />
         </div>
-
-        <div>
-          <form
-            className={
-              searchOpen === undefined
-                ? "initial"
-                : searchOpen
-                ? `search-open`
-                : `search-close`
-            }
-            onSubmit={(e) => titleChecker(e)}
+        <form id="search-form" onSubmit={(e) => {
+          e.preventDefault(); 
+          titleChecker(e.target[0].value);
+        }}>
+          <div 
+            onClick={openSwitch} 
+            className={applyStyles(`btn`)}
           >
-            <img
-              onClick={() => {
-                setSearchOpen(true);
-              }}
-              className="search-icon"
-              src={"./Search_Icon.svg"}
-              alt="none"
+            <img 
+              onClick={openSwitch} 
+              className="btn-el_search" 
+              src={search}  
+              alt="search-icon" 
             />
-            <input
+            <input 
+              className={applyStyles(`input`)} 
               id="input"
-              type="text"
-              className={searchOpen ? "search-bar" : "search-bar-close"}
-            ></input>
-            <button
-              type="button"
-              onClick={() => {
-                setSearchOpen(false);
+            />
+            <img 
+              onClick={(e) => {
+                closeSwitch(e);
                 clearText();
                 setMovieSearch();
+                pageSet(1);
               }}
-              className={searchOpen ? "button-show" : "button-hide"}
-            >
-              <img className="button-img" alt="" src="./cancel.svg" />
-            </button>
-          </form>
-        </div>
+              className={applyStyles(`cancel`)} 
+              src={cancel} 
+              alt="cancel-icon" 
+            />
+          </div>
+        </form>
       </nav>
-
-      <div className="hero">
-        <h2 className="hero-text">
-          You're now being <br /> controlled by ToadTV
-        </h2>
-
+        <div className="hero">
+          <h2 className="hero-text">
+            You're now being <br /> controlled by ToadTV
+          </h2>
         <div className="hero-line"></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default NavBar;
