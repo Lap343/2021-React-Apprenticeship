@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <NavBar
-        pageSet={setPage}
+        setPage={setPage}
         movieValue={movieSearch}
         setMovieSearch={setMovieSearch}
       />
