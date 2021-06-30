@@ -10,7 +10,6 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
     document.getElementById("input").value = "";
   };
 
-  //Get title checker to be able to be fired from the search button and entered with input
   const titleChecker = (input) => {
     if ( cherryPopped && input.length < 3 ){
       alert("Please search a movie title with more than two letters");
@@ -56,7 +55,6 @@ const NavBar = ({ pageSet, movieSearch, setMovieSearch }) => {
             className={applyStyles(`btn`)}
           >
             <img 
-              //Get the onClick to work 
               onClick={openSwitch} 
               className="btn-el_search" 
               src={search}  
