@@ -56,14 +56,6 @@ function App() {
           toggleModal={toggleModal}
           detailClick={detailClick}
         />
-
-          />
-        ) : (
-          <h2 className="error-text"> Please enter a valid movie title </h2>
-        )
-      ) : (
-        <Home />
-
       )}
     </div>
   );
