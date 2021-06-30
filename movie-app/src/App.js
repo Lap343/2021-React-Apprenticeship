@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar pageSet={setPage} movieValue={movieSearch} setMovieSearch={setMovieSearch} />
+      <NavBar setPage={setPage} movieValue={movieSearch} setMovieSearch={setMovieSearch} />
       {
       movieSearch ? (
         movie.Search ? (
