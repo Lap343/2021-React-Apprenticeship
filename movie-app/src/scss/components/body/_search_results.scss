@@ -56,4 +56,15 @@
   font-weight: 600;
 }
 
+.page-shortcut-btn {
+  border-radius: 40px;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 5px 3px grey;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 20px 0 20px;
+}
+
 @import "./_card";
