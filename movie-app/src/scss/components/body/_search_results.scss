@@ -10,6 +10,12 @@
   grid-row-gap: 20px;
 }
 
+@media only screen and (max-width: 700px) {
+  .search-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
 .back-button {
   border-radius: 50%;
   height: 3rem;
