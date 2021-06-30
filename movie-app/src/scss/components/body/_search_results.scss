@@ -5,14 +5,14 @@
   margin-bottom: 20px;
   padding-left: 5%;
   padding-right: 5%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
+  grid-column-gap: 1rem;
   grid-row-gap: 20px;
 }
 
 @media only screen and (max-width: 700px) {
   .search-container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9.38em, 1fr));
   }
 }
 
