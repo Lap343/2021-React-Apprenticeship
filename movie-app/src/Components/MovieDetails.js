@@ -84,8 +84,12 @@ const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
         {/* Right section   */}
         <div className="modal-info">
           <div className="info-title">
-            <h1>{Title}</h1>
-            <h2>({Year})</h2>
+            <h1 className="info-title-name">
+              {Title}
+            </h1>
+            <h2 className="info-title-year">
+              ({Year})
+            </h2>
           </div>
 
           {/* Runtime/rated */}
@@ -94,7 +98,7 @@ const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
               <h3>{Runtime}</h3>
             </div>
             <div className="tag-bubble">
-              <h3>{Rated}</h3>
+              <h3>Rated: {Rated}</h3>
             </div>
             <div className="tag-bubble">
               <h3>{Genre}</h3>
@@ -102,13 +106,15 @@ const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
           </div>
 
           {/* Imdb, Rotten Tomatoes, Metacritics tags */}
-          <div className="info-rating">{tags}</div>
+          <div className="info-rating">
+            {tags}
+          </div>
 
           <div className="info-directors">
             <div className="info-subheading">
               <h3>Director:</h3>
-              <div className="info-content">{Director}</div>
             </div>
+            <div className="info-content">{Director}</div>
           </div>
 
           <div className="info-actors">

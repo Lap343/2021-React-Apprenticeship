@@ -20,17 +20,31 @@ export const Home = ({
   const movieGrabber = async () => {
     let devPicksFinal = [];
     let featuredFinal = [];
-    await getMovieById("tt0477139").then((res) => devPicksFinal.push(res));
-    await getMovieById("tt0110357").then((res) => devPicksFinal.push(res));
-    await getMovieById("tt1119646").then((res) => devPicksFinal.push(res));
-    await getMovieById("tt0117705").then((res) => devPicksFinal.push(res));
-    await getMovieById("tt0120382").then((res) => devPicksFinal.push(res));
+    const devPickIds = [
+      "tt0477139",
+      "tt0110357",
+      "tt1119646",
+      "tt0117705",
+      "tt0120382",
+    ];
+    const featuredIds = [
+      "tt5433138",
+      "tt8332922",
+      "tt8385148",
+      "tt8376234",
+      "tt3228774",
+    ];
+    /** findByIdPush takes array of movie IDs, fetches movie info and pushes movie info object into finalArray, and returns finalArray */
+    const findByIdPush = async (idArray, finalArray) => {
+      for (let i = 0; i < idArray.length; i += 1) {
+        await getMovieById(idArray[i]).then((res) => finalArray.push(res));
+      }
+      return finalArray;
+    };
+    devPicksFinal = await findByIdPush(devPickIds, devPicksFinal);
+    featuredFinal = await findByIdPush(featuredIds, featuredFinal);
+
     setDevPicks(devPicksFinal);
-    await getMovieById("tt5433138").then((res) => featuredFinal.push(res));
-    await getMovieById("tt8332922").then((res) => featuredFinal.push(res));
-    await getMovieById("tt8385148").then((res) => featuredFinal.push(res));
-    await getMovieById("tt8376234").then((res) => featuredFinal.push(res));
-    await getMovieById("tt3228774").then((res) => featuredFinal.push(res));
     setFeatured(featuredFinal);
   };
 
@@ -73,11 +87,11 @@ export const Home = ({
   return (
     <>
       <div>
-        <h1 className="home-titles">Developer's Movie Picks</h1>
+        <h1 className="home-titles">Developer's Picks</h1>
         <div className="search-container">{devMoviesPrinter()}</div>
       </div>
       <div>
-        <h1 className="home-titles">Featured Movies</h1>
+        <h1 className="home-titles">Featured</h1>
         <div className="search-container">{featMoviesPrinter()}</div>
       </div>
 
