@@ -85,6 +85,7 @@ const NavBar = ({ setPage, setMovieSearch }) => {
             className={applyStyles(`input`)}
             id="input"
             type="text"
+            placeholder="Search movies by title"
             value={searchString}
             onChange={handleSearchChange}
             onKeyPress={enterSubmit}
