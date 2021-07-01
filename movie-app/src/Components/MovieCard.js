@@ -4,7 +4,7 @@ import { useState } from "react";
   detailClick: 1. Sends individual movie imdbID back to parent component(i.e. Searched) and fetch movie info by ID
                2. toggleModal: open & close modal
  */
-const MovieCard = ({ movie, setSelected, toggleModal, detailClick }) => {
+const MovieCard = ({ movie, toggleModal, detailClick }) => {
   // For making poster a background image instead of img tag for styling purposes
   const moviePoster = {
     backgroundImage: `url(${movie.Poster})`,
