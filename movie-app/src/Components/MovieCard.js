@@ -27,10 +27,10 @@ const MovieCard = ({ movie, setSelected, toggleModal, detailClick }) => {
       <div
         className={`info-container ${cardHover ? `hide-info` : `show-info`}`}
       >
-        <h2 onClick={detailClick} id={movie.imdbID}>
+        <h2 className="card-title" onClick={detailClick} id={movie.imdbID}>
           {movie.Title}
         </h2>
-        <h3 onClick={detailClick} id={movie.imdbID}>
+        <h3 className="card-year" onClick={detailClick} id={movie.imdbID}>
           {movie.Year}
         </h3>
         <button type="button" id={movie.imdbID} className="detail-button">

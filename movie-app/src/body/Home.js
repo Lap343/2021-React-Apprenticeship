@@ -75,11 +75,11 @@ export const Home = ({
   return (
     <>
       <div>
-        <h1 className="home-titles">Developer's Movie Picks</h1>
+        <h1 className="home-titles">Developer's Picks</h1>
         <div className="search-container">{devMoviesPrinter()}</div>
       </div>
       <div>
-        <h1 className="home-titles">Featured Movies</h1>
+        <h1 className="home-titles">Featured</h1>
         <div className="search-container">{featMoviesPrinter()}</div>
       </div>
 
