@@ -1,9 +1,14 @@
 //........................................................................
 // GENERAL STYLING
 // Applies to everything (Boiler Plate)
-html,
-body {
-  height: 100%;
+html, body {
+  background: rgb(137, 207, 240);
+  background: linear-gradient(
+    rgba(137, 207, 240, 0.9) 0%,
+    rgba(239, 237, 229, 1) 25%
+  );
+  min-height: 100%;
+  bottom:0;
 }
 * {
   margin: 0;
@@ -18,16 +23,6 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  background: rgb(137, 207, 240);
-  background: linear-gradient(
-    rgba(137, 207, 240, 0.9) 0%,
-    rgba(239, 237, 229, 1) 25%
-  );
-  height: 100%;
-
-  .error-container {
-    height: 100vh;
-  }
 
   .error-text {
     margin: 3rem 0 0.5rem 5%;

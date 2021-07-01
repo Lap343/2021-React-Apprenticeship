@@ -8,7 +8,11 @@
   grid-template-columns: repeat(auto-fill, minmax(18.75em, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 20px;
+
 }
+
+
+
 
 @media only screen and (max-width: 700px) {
   .search-container {
