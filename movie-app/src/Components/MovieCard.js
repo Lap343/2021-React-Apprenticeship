@@ -24,7 +24,7 @@ const MovieCard = ({ movie, toggleModal, detailClick }) => {
   const toggleInfoHover = () => {
     setCardHover(!cardHover);
   };
-  console.log(posterCheck())
+
   return (
     <div
       className="card"
