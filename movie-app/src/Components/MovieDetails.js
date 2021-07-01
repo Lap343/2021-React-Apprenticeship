@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react'
-import { getMovieById } from '../utilities/utils'
-import cancelIcon from '../assets/cancel.svg'
-import tomato from '../assets/rottentomatoes.png'
-import metacritic from '../assets/metacritic.png'
-import star from '../assets/star.svg'
+import { useState, useEffect } from "react";
+import { getMovieById } from "../utilities/utils";
+import cancelIcon from "../assets/cancel.svg";
+import tomato from "../assets/rottentomatoes.png";
+import metacritic from "../assets/metacritic.png";
+import star from "../assets/star.svg";
 //........................................................................
 // Left off at modal container hover issue
 // Modal container sits as an overlay on hide modal class and messing with the hover functionality of the card
 
 const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
   // console.log(`movieList in details`, movieList)
-  const [targetMovie, setTargetMovie] = useState({})
+  const [targetMovie, setTargetMovie] = useState({});
 
   useEffect(() => {
-    getMovieById(selected).then((movieData) => setTargetMovie(movieData))
-  }, [selected])
+    getMovieById(selected).then((movieData) => setTargetMovie(movieData));
+  }, [selected]);
 
   const {
     Year,
@@ -27,29 +27,29 @@ const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
     Director,
     Poster,
     Runtime,
-  } = targetMovie
+  } = targetMovie;
   // Create an array of tags containing ratings sources and value
   // Function for returning images depending on if Rating [] have the rating
   const sourceLogo = (source) => {
     // check if source exists, and return the correct icons
-    if (source === 'Rotten Tomatoes') {
+    if (source === "Rotten Tomatoes") {
       // return logo
-      return tomato
+      return tomato;
     }
-    if (source === 'Metacritic') {
-      return metacritic
+    if (source === "Metacritic") {
+      return metacritic;
     }
-    if (source === 'Internet Movie Database') {
-      return star
+    if (source === "Internet Movie Database") {
+      return star;
     }
-  }
-  let tags = []
+  };
+  let tags = [];
   // Check for modal info and Ratings length, map and generate images and rating divs for each
   if (modalOpen) {
     if (targetMovie && Ratings) {
       tags = Ratings.map((ratingObj, i) => {
-        let source = ratingObj['Source']
-        let value = ratingObj['Value']
+        let source = ratingObj["Source"];
+        let value = ratingObj["Value"];
         return (
           <div className="rating-container" key={i}>
             <img
@@ -59,29 +59,29 @@ const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
             />
             <h3 className="rating-tag">{`${value}`}</h3>
           </div>
-        )
-      })
+        );
+      });
     }
   }
   const modalPoster = {
     backgroundImage: `url(${Poster})`,
-  }
+  };
 
   const modalPosterOverlay = {
     backgroundImage: `url(${Poster})`,
     backgroundSize: `cover`,
-  }
+  };
   // Function to prevent modal from closing on click within modal-container
   const stopClick = (e) => {
-    e.stopPropagation()
-  }
+    e.stopPropagation();
+  };
 
   return (
     <div
       className={`modal-container ${modalOpen ? `show-modal` : `hide-modal`}`}
       onClick={toggleModal}
     >
-      {/* Background overlay */}''
+      {/* Background overlay */}
       <div style={modalPosterOverlay} className="modal" onClick={stopClick}>
         <div style={modalPoster} className="modal-poster"></div>
         {/* Right section   */}
@@ -134,7 +134,7 @@ const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MovieDetails
+export default MovieDetails;

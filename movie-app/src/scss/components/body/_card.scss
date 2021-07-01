@@ -2,17 +2,19 @@
   background-color: #ccc;
   background-size: cover;
   color: rgb(226, 226, 226);
-  height: 450px;
+  height: 28.125em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   position: relative;
   overflow: hidden;
-  min-height: 28.125em;
-  min-width: 18.75em;
-  max-height: 28.125em;
-  max-width: 18.75em;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    height: 14.188em;
+  }
 }
 
 .detail-button {
@@ -104,5 +106,57 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  @keyframes show {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hide {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes translate-down {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes translate-up {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title-overlay {
+    height: 60%;
+  }
+
+  .detail-button {
+    font-size: 12px;
+  }
+
+  .info-container {
+    font-size: 16px;
   }
 }
