@@ -9,11 +9,11 @@ const makeJSON = async url => {
 }
 
 export const getMoviesByName = (movie_title, page) => {
-    const base_url = `http://www.omdbapi.com/?s=${movie_title}&apikey=${API_KEY}&page=${page}`;
+    const base_url = `http://www.omdbapi.com/?s=${movie_title}&apikey=${API_KEY}&page=${page}&type=movie`;
     return makeJSON(base_url);
 }
 export const getMovieById = movieID => {
-    const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}`;
+    const apiURL = `http://www.omdbapi.com/?i=${movieID}&apikey=${API_KEY}&type=movie`;
     return makeJSON(apiURL);
 }
 
