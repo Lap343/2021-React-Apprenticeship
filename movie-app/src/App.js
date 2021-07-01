@@ -29,11 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar
-        setPage={setPage}
-        movieValue={movieSearch}
-        setMovieSearch={setMovieSearch}
-      />
+      <NavBar setPage={setPage} setMovieSearch={setMovieSearch} />
       {movieSearch ? (
         movie.Search ? (
           <Searched
@@ -46,7 +42,6 @@ function App() {
             setSelected={setSelected}
             toggleModal={toggleModal}
             modalOpen={modalOpen}
-            setModalOpen={setModalOpen}
           />
         ) : (
           <div className="error-container">
