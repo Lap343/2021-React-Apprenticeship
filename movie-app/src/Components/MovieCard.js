@@ -14,7 +14,6 @@ const MovieCard = ({ movie, toggleModal, detailClick }) => {
   }
   const posterCheck = ()=>{
     if(movie.Poster==='N/A'){
-      console.log(`broken image`)
     return placeholder;
   }else {
     return moviePoster;
