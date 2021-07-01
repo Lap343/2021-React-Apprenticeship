@@ -4,12 +4,11 @@ import { getMovieById } from "../utilities/utils";
 import MovieDetails from "../components/MovieDetails";
 
 export const Home = ({
-  movies,
-  selected,
   setSelected,
   toggleModal,
   modalOpen,
   detailClick,
+  selected,
 }) => {
   let [devPicks, setDevPicks] = useState([]);
   let [featured, setFeatured] = useState([]);
@@ -18,7 +17,6 @@ export const Home = ({
     movieGrabber();
   }, []);
 
-  //await the movieGrabber function
   const movieGrabber = async () => {
     let devPicksFinal = [];
     let featuredFinal = [];
@@ -87,7 +85,6 @@ export const Home = ({
         modalOpen={modalOpen}
         toggleModal={toggleModal}
         selected={selected}
-        movies={movies}
       />
     </>
   );
