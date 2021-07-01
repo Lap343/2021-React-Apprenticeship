@@ -11,6 +11,7 @@ const Searched = ({
   setSelected,
   modalOpen,
   detailClick,
+  movieSearch
 }) => {
   const moviesCheck = () => {
     if (movies) {
@@ -37,13 +38,17 @@ const Searched = ({
     });
   };
 
+  function capitalizeFirstLetter(str) {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
   let movieRemainder =
     parseInt(totalResults) % 10 === 0
       ? parseInt(totalResults) / 10
       : Math.floor(parseInt(totalResults) / 10 + 1);
-
   return (
     <>
+    <h1 className='error-text'>Search Results for {capitalizeFirstLetter(movieSearch)}</h1>
       <div className="search-container">{moviesCheck()}</div>
       <div className="page-btn-container">
         <button

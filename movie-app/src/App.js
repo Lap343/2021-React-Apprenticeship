@@ -7,8 +7,9 @@ import { Home } from "./body/Home";
 
 function App() {
   const [movie, setMovie] = useState({});
-  const [movieSearch, setMovieSearch] = useState();
+  const [movieSearch, setMovieSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [searchString, setSearchString] = useState("");
 
   // modal toggle and card movie id
   const [selected, setSelected] = useState("");
@@ -29,7 +30,13 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar setPage={setPage} setMovieSearch={setMovieSearch} />
+      <NavBar
+        setPage={setPage}
+        setMovieSearch={setMovieSearch}
+        searchString={searchString}
+        setSearchString={setSearchString}
+
+      />
       {movieSearch ? (
         movie.Search ? (
           <Searched
@@ -42,11 +49,12 @@ function App() {
             setSelected={setSelected}
             toggleModal={toggleModal}
             modalOpen={modalOpen}
+            searchString={searchString}
+            movieSearch={movieSearch}
+ 
           />
         ) : (
-        
-            <h2 className="error-text"> Please enter a valid movie title </h2>
-          
+          <h2 className="error-text"> Please enter a valid movie title </h2>
         )
       ) : (
         <Home

@@ -2,11 +2,11 @@ import { useState, useRef } from "react";
 import cancel from "../assets/search-cancel.svg";
 import search from "../assets/search-magnify.svg";
 
-const NavBar = ({ setPage, setMovieSearch }) => {
+const NavBar = ({ setPage, setMovieSearch, setSearchString, searchString }) => {
 
   const [active, setActive] = useState(false);
   const [firstClick, setFirstClick] = useState(false);
-  const [searchString, setSearchString] = useState("");
+
 
   const searchBar = useRef(null);
 

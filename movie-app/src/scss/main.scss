@@ -2,11 +2,12 @@
 // GENERAL STYLING
 // Applies to everything (Boiler Plate)
 html, body {
-  background: rgb(137, 207, 240);
+  
   background: linear-gradient(
     rgba(137, 207, 240, 0.9) 0%,
     rgba(239, 237, 229, 1) 25%
   );
+  
   min-height: 100%;
   bottom:0;
 }
