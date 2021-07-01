@@ -2,12 +2,12 @@ import { useState, useRef } from "react";
 import cancel from "../assets/search-cancel.svg";
 import search from "../assets/search-magnify.svg";
 
-const NavBar = ({ setPage, movieSearch, setMovieSearch }) => {
-  // applies style
+const NavBar = ({ setPage, setMovieSearch }) => {
+
   const [active, setActive] = useState(false);
   const [firstClick, setFirstClick] = useState(false);
   const [searchString, setSearchString] = useState("");
-  // Autofocus for search input
+
   const searchBar = useRef(null);
 
   const clearText = () => {

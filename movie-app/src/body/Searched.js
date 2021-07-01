@@ -10,7 +10,6 @@ const Searched = ({
   selected,
   setSelected,
   modalOpen,
-  setModalOpen,
   detailClick,
 }) => {
   const moviesCheck = () => {
@@ -65,7 +64,6 @@ const Searched = ({
         >
           <img src="next.png" alt="" className="back-page-btn" />
         </button>
-        {/*  */}
         <div className="page-number">
           {page}/{movieRemainder}
         </div>
@@ -95,7 +93,6 @@ const Searched = ({
         modalOpen={modalOpen}
         toggleModal={toggleModal}
         selected={selected}
-        movies={movies}
       />
     </>
   );

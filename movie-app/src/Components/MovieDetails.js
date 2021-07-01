@@ -4,12 +4,9 @@ import cancelIcon from "../assets/cancel.svg";
 import tomato from "../assets/rottentomatoes.png";
 import metacritic from "../assets/metacritic.png";
 import star from "../assets/star.svg";
-//........................................................................
-// Left off at modal container hover issue
-// Modal container sits as an overlay on hide modal class and messing with the hover functionality of the card
 
-const MovieDetails = ({ selected, toggleModal, modalOpen, movies }) => {
-  // console.log(`movieList in details`, movieList)
+
+const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
   const [targetMovie, setTargetMovie] = useState({});
 
   useEffect(() => {
