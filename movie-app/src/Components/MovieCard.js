@@ -32,6 +32,8 @@ const MovieCard = ({ movie, toggleModal, detailClick }) => {
       style={posterCheck()}
       onMouseEnter={() => toggleInfoHover()}
       onMouseLeave={() => toggleInfoHover()}
+      onFocus={() => toggleInfoHover()} 
+      onBlur={() => toggleInfoHover()}
       onClick={detailClick}
     >
       <div

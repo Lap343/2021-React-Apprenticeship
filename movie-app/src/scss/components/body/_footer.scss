@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
+    margin: 0 20px;
 }
 
 .dev-profile {
@@ -58,6 +58,79 @@
 
 a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer{
+        height: 250px;
+        margin-top: 100px;
+    }
+    .dev-container{
+        margin: 30px 0 80px 0;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .footer{
+        height: 200px;
+        margin-top: 80px;
+    }
+    .dev-container{
+        margin: 20px 0 60px 0;
+    }
+    .profile-container{
+        margin: 0 5px;
+    }
+    .dev-profile {
+        height: 100px;
+        width: 100px;
+    }
+    a{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer{
+        height: 150px;
+        margin-top: 60px;
+    }
+    .dev-container{
+        margin: 10px 0 40px 0;
+    }
+    .profile-container{
+        margin: 0 5px;
+    }
+    .dev-profile {
+        height: 80px;
+        width: 80px;
+    }
+    a{
+        font-size: 10px;
+    }
+    .footer-title{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .footer{
+        height: 100px;
+        margin-top: 40px;
+    }
+    .dev-container{
+        margin: 5px 0 40px 0;
+    }
+    .profile-container{
+        margin: 0 2px;
+    }
+    .dev-profile {
+        height: 60px;
+        width: 60px;
+    }
+    a{
+        font-size: 5px;
+    }
 }
 
 @keyframes fade-down {
