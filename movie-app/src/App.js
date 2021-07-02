@@ -8,8 +8,9 @@ import Footer from './body/Footer';
 
 function App() {
   const [movie, setMovie] = useState({});
-  const [movieSearch, setMovieSearch] = useState();
+  const [movieSearch, setMovieSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [searchString, setSearchString] = useState("");
 
   // modal toggle and card movie id
   const [selected, setSelected] = useState("");
@@ -30,7 +31,13 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar setPage={setPage} setMovieSearch={setMovieSearch} />
+      <NavBar
+        setPage={setPage}
+        setMovieSearch={setMovieSearch}
+        searchString={searchString}
+        setSearchString={setSearchString}
+
+      />
       {movieSearch ? (
         movie.Search ? (
           <Searched
@@ -43,11 +50,12 @@ function App() {
             setSelected={setSelected}
             toggleModal={toggleModal}
             modalOpen={modalOpen}
+            searchString={searchString}
+            movieSearch={movieSearch}
+ 
           />
         ) : (
-          <div className="error-container">
-            <h2 className="error-text"> Please enter a valid movie title </h2>
-          </div>
+          <h2 className="error-text"> Please enter a valid movie title </h2>
         )
       ) : (
         <Home

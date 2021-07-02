@@ -64,6 +64,20 @@ const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
     backgroundImage: `url(${Poster})`,
   };
 
+  const placeholder = {
+    backgroundImage: `url(placeholder.svg)`,
+    backgroundPosition: 'center',
+  }
+
+  const posterCheck = () => {
+    if (Poster === "N/A") {
+      console.log(`broken image`);
+      return placeholder;
+    } else {
+      return modalPoster;
+    }
+  };
+
   const modalPosterOverlay = {
     backgroundImage: `url(${Poster})`,
     backgroundSize: `cover`,
@@ -80,7 +94,7 @@ const MovieDetails = ({ selected, toggleModal, modalOpen }) => {
     >
       {/* Background overlay */}
       <div style={modalPosterOverlay} className="modal" onClick={stopClick}>
-        <div style={modalPoster} className="modal-poster"></div>
+        <div style={posterCheck()} className="modal-poster"></div>
         {/* Right section   */}
         <div className="modal-info">
           <div className="info-title">
