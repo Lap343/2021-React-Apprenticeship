@@ -4,6 +4,7 @@ import { getMoviesByName } from "./utilities/utils";
 import NavBar from "./header/NavBar";
 import Searched from "./body/Searched";
 import { Home } from "./body/Home";
+import Footer from './body/Footer';
 
 function App() {
   const [movie, setMovie] = useState({});
@@ -66,6 +67,10 @@ function App() {
           detailClick={detailClick}
         />
       )}
+
+      {/* Footer */}
+        <Footer/>
+
     </div>
   );
 }
