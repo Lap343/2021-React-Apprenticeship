@@ -1,0 +1,257 @@
+.hero {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  &-text {
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  &-line {
+    width: 150px;
+    height: 10px;
+    background-color: #333;
+  }
+}
+
+/* --------------------------------------------------- --------------------------------------------------- INITIAL ELEMENT STYLING */
+
+.btn-el_btn {
+  height: 100px;
+  width: 100px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px #d7d7d7;
+  z-index: 10;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-el_input {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  width: 0%;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  height: 40%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.btn-el_cancel {
+  z-index: 10;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.btn-el_search {
+  z-index: 20;
+  height: 40%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .btn-el_btn {
+    margin-top: 25px;
+    width: 500px;
+  }
+
+  .btn-el_cancel {
+    position: relative;
+    opacity: 1;
+    height: 40%;
+  }
+
+  .btn-el_input {
+    position: relative;
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-el_btn {
+    margin-top: 25px;
+    width: 85vw;
+    height: 75px;
+  }
+
+  .btn-el_cancel {
+    position: relative;
+    opacity: 1;
+  }
+
+  .btn-el_input {
+    position: relative;
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+/* --------------------------------------------------- --------------------------------------------------- INITIAL ELEMENT STYLING */
+
+/* --------------------------------------------------- --------------------------------------------------- ANIMATION CONTROLS */
+
+/* animation: duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+
+.stacked_btn {
+  animation: 0.7s ease 0s 1 normal forwards running close;
+}
+
+.sidexside_btn {
+  animation: 0.7s ease 0s 1 normal forwards running open;
+}
+
+.stacked_input {
+  animation: 0.7s ease 0s 1 normal forwards running stacked_input;
+}
+
+.sidexside_input {
+  animation: 0.7s ease 0s 1 normal forwards running sidexside_input;
+}
+
+.stacked_cancel {
+  animation: 0.7s ease 0s 1 normal forwards running stacked_cancel;
+}
+
+.sidexside_cancel {
+  animation: 0.7s ease 0s 1 normal forwards running sidexside_cancel;
+}
+
+@media only screen and (max-width: 1000px) {
+  .stacked_btn,
+  .sidexside_btn,
+  .stacked_input,
+  .sidexside_input,
+  .stacked_cancel,
+  .sidexside_cancel {
+    animation: none;
+  }
+}
+
+/* --------------------------------------------------- --------------------------------------------------- ANIMATION CONTROLS */
+
+/* --------------------------------------------------- --------------------------------------------------- SEARCH CONTAINER ANIMATION */
+
+@keyframes open {
+  0% {
+    width: 100px;
+    border-radius: 50px;
+  }
+
+  100% {
+    width: 500px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 500px;
+    border-radius: 20px;
+  }
+
+  100% {
+    width: 100px;
+    border-radius: 50px;
+  }
+}
+/* --------------------------------------------------- --------------------------------------------------- SEARCH CONTAINER ANIMATION */
+
+/* --------------------------------------------------- --------------------------------------------------- INPUT FIELD ANIMATION */
+
+@keyframes stacked_input {
+  0% {
+    position: relative;
+    opacity: 1;
+    width: 70%;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+@keyframes sidexside_input {
+  0% {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+  }
+  1% {
+    position: relative;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    width: 70%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* --------------------------------------------------- --------------------------------------------------- INPUT FIELD ANIMATION */
+
+/* --------------------------------------------------- --------------------------------------------------- CANCEL ICON ANIMATION */
+
+@keyframes stacked_cancel {
+  0% {
+    position: relative;
+    opacity: 1;
+    transform: rotateZ(360deg);
+    height: 40%;
+  }
+
+  1% {
+    opacity: 0;
+    height: auto;
+  }
+
+  55% {
+    opacity: 0;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    height: auto;
+    position: absolute;
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes sidexside_cancel {
+  0% {
+    position: absolute;
+    opacity: 0;
+    transform: rotateZ(360deg);
+    height: 0%;
+  }
+  1% {
+    position: relative;
+    height: 40%;
+  }
+  5% {
+    opacity: 1;
+    height: 40%;
+  }
+  100% {
+    transform: rotateZ(0deg);
+    position: relative;
+    opacity: 1;
+    height: 40%;
+  }
+}
+
+/* --------------------------------------------------- --------------------------------------------------- CANCEL ICON ANIMATION */

@@ -1,0 +1,165 @@
+.card {
+  background-color: #ccc;
+  background-size: cover;
+  color: rgb(226, 226, 226);
+  height: 28.125em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px #666;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    height: 14.188em;
+  }
+}
+
+.detail-button {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.title-overlay {
+  height: 150px;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.65;
+  position: absolute;
+  z-index: 5;
+}
+
+.info-container {
+  z-index: 10;
+  padding: 10px;
+  opacity: 0;
+}
+
+// Overlay container will move up 150px
+.overlay-show {
+  animation-name: translate-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+// Overlay container will move up 150px
+.overlay-hide {
+  animation-name: translate-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+// Overlay Animation
+@keyframes translate-down {
+  from {
+    transform: translateY(150px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes translate-up {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(150px);
+  }
+}
+
+.hide-info {
+  animation-name: hide;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.show-info {
+  animation-name: show;
+  animation-duration: 0.7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  @keyframes show {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hide {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes translate-down {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes translate-up {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title-overlay {
+    height: 60%;
+  }
+
+  .detail-button {
+    font-size: 12px;
+  }
+
+  .info-container {
+    font-size: 16px;
+  }
+}

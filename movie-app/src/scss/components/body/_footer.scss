@@ -1,0 +1,158 @@
+.footer {
+    width: 100vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+    rgba(239, 237, 229, 1) 0%,
+    rgba(137, 207, 240, 0.9) 100%);
+    transform: translateY(100%);
+}
+
+.dev-container {
+    display: flex;
+    margin-top: 40px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.dev-profile {
+    height: 125px;
+    width: 125px;
+    background-color: #ffffff;
+    border-radius: 62.5px;
+    filter: grayscale(90%);
+    transition: 0.7s;
+}
+
+.dev-name {
+    text-align: center;
+    color: #333;
+    opacity: 1;
+}
+
+.dev-name-down {
+    animation-name: fade-down;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+}
+
+.dev-name-up {
+    animation-name: fade-up;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+}
+
+.dev-profile:hover {
+    filter: none;
+    transform: translateY(-10px);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer{
+        height: 250px;
+        margin-top: 100px;
+    }
+    .dev-container{
+        margin: 30px 0 80px 0;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .footer{
+        height: 200px;
+        margin-top: 80px;
+    }
+    .dev-container{
+        margin: 20px 0 60px 0;
+    }
+    .profile-container{
+        margin: 0 5px;
+    }
+    .dev-profile {
+        height: 100px;
+        width: 100px;
+    }
+    a{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer{
+        height: 150px;
+        margin-top: 60px;
+    }
+    .dev-container{
+        margin: 10px 0 40px 0;
+    }
+    .profile-container{
+        margin: 0 5px;
+    }
+    .dev-profile {
+        height: 80px;
+        width: 80px;
+    }
+    a{
+        font-size: 10px;
+    }
+    .footer-title{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .footer{
+        height: 100px;
+        margin-top: 40px;
+    }
+    .dev-container{
+        margin: 5px 0 40px 0;
+    }
+    .profile-container{
+        margin: 0 2px;
+    }
+    .dev-profile {
+        height: 60px;
+        width: 60px;
+    }
+    a{
+        font-size: 5px;
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
