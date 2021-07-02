@@ -28,6 +28,7 @@
   background-color: white;
   margin: 1rem;
   box-shadow: 2px 2px 5px 3px grey;
+  cursor: pointer;
 }
 
 .hide-back-button {
@@ -69,6 +70,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0 20px 0 20px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 500px) {
