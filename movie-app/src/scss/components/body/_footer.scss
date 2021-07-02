@@ -1,7 +1,6 @@
 .footer {
     width: 100vw;
-    height: 300px;
-    margin-top: 150px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,12 +8,12 @@
     background: linear-gradient(
     rgba(239, 237, 229, 1) 0%,
     rgba(137, 207, 240, 0.9) 100%);
+    transform: translateY(100%);
 }
 
 .dev-container {
     display: flex;
     margin-top: 40px;
-    margin-bottom: 100px;
 }
 
 .profile-container {
@@ -37,7 +36,7 @@
 .dev-name {
     text-align: center;
     color: #333;
-    opacity: 0;
+    opacity: 1;
 }
 
 .dev-name-down {
