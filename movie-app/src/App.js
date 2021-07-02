@@ -5,6 +5,7 @@ import NavBar from "./header/NavBar";
 import Searched from "./body/Searched";
 import { Home } from "./body/Home";
 import Footer from './body/Footer';
+import kermit from './assets/kermit.gif';
 
 function App() {
   const [movie, setMovie] = useState({});
@@ -55,7 +56,10 @@ function App() {
  
           />
         ) : (
-          <h2 className="error-text"> Please enter a valid movie title </h2>
+          <div className="empty-state">
+            <h2 className="error-text"> Please enter a valid movie title </h2>
+            <img src={kermit} alt="kermit-gif"/>
+          </div>
         )
       ) : (
         <Home
