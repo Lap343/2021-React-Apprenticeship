@@ -91,7 +91,7 @@ const NavBar = ({ setPage, setMovieSearch, setSearchString, searchString }) => {
             onKeyPress={enterSubmit}
             ref={searchBar}
             onFocus={openSwitch}
-            onBlur={closeSwitch}
+            
           />
           {/* close search bar, return home, and clear inpu */}
           <img
