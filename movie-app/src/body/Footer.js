@@ -64,21 +64,21 @@ const Footer = () => {
         <div className="footer">
             <h2 className="footer-title" >The talents that brought you ToadTV</h2>
             <div className="dev-container">
-                <div 
+                <div
                     className="profile-container"
                     onMouseEnter={() => triggerToggle(`paul`)}
                     onMouseLeave={() => triggerToggle(`paul`)}
                 >
                     <a href={developers[0].github} target="_blank">
                         <div style={backgroundImage(`${paul}`)} className="dev-profile"></div>
-                        
+
                         <h3 className={`dev-name ${ptrigger ? "dev-name-down" : "dev-name-up"}`}>
                             {developers[0].name}
                         </h3>
                     </a>
                 </div>
-        
-                <div 
+
+                <div
                     className="profile-container"
                     onMouseEnter={() => triggerToggle(`luis`)}
                     onMouseLeave={() => triggerToggle(`luis`)}
@@ -91,7 +91,7 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div 
+                <div
                     className="profile-container"
                     onMouseEnter={() => triggerToggle(`garrett`)}
                     onMouseLeave={() => triggerToggle(`garrett`)}
@@ -104,7 +104,7 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div 
+                <div
                     className="profile-container"
                     onMouseEnter={() => triggerToggle(`kenny`)}
                     onMouseLeave={() => triggerToggle(`kenny`)}
@@ -117,7 +117,7 @@ const Footer = () => {
                     </a>
                 </div>
 
-                <div 
+                <div
                     className="profile-container"
                     onMouseEnter={() => triggerToggle(`connie`)}
                     onMouseLeave={() => triggerToggle(`connie`)}
@@ -130,7 +130,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            
+
         </div>
     )
 }
