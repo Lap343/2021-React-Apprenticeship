@@ -48,7 +48,7 @@ const Searched = ({
       : Math.floor(parseInt(totalResults) / 10 + 1);
   return (
     <>
-    <h1 className='error-text'>Search Results for {capitalizeFirstLetter(movieSearch)}</h1>
+    <h1 className='search-res' >Search Results for {capitalizeFirstLetter(movieSearch)}</h1>
       <div className="search-container">{moviesCheck()}</div>
       <div className="page-btn-container">
         <button
