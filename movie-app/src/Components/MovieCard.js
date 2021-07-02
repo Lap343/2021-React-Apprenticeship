@@ -1,28 +1,21 @@
 import { useState } from "react";
-/**
-  detailClick: 1. Sends individual movie imdbID back to parent component(i.e. Searched) and fetch movie info by ID
-               2. toggleModal: open & close modal
- */
+
 const MovieCard = ({ movie, toggleModal, detailClick }) => {
+  const [cardHover, setCardHover] = useState(false);
   // For making poster a background image instead of img tag for styling purposes
   const moviePoster = {
     backgroundImage: `url(${movie.Poster})`,
   };
   const placeholder = {
     backgroundImage: `url(placeholder.svg)`,
-    backgroundPosition: 'center',
-  }
-  const posterCheck = ()=>{
-    if(movie.Poster==='N/A'){
-    return placeholder;
-  }else {
-    return moviePoster;
-  }
-  }
-
-  const [cardHover, setCardHover] = useState(false);
-  const toggleInfoHover = () => {
-    setCardHover(!cardHover);
+    backgroundPosition: "center",
+  };
+  const posterCheck = () => {
+    if (movie.Poster === "N/A") {
+      return placeholder;
+    } else {
+      return moviePoster;
+    }
   };
 
   return (
@@ -30,10 +23,10 @@ const MovieCard = ({ movie, toggleModal, detailClick }) => {
       className="card"
       id={movie.imdbID}
       style={posterCheck()}
-      onMouseEnter={() => toggleInfoHover()}
-      onMouseLeave={() => toggleInfoHover()}
-      onFocus={() => toggleInfoHover()} 
-      onBlur={() => toggleInfoHover()}
+      onMouseEnter={() => setCardHover(true)}
+      onMouseLeave={() => setCardHover(false)}
+      onFocus={() => setCardHover(true)}
+      onBlur={() => setCardHover(false)}
       onClick={detailClick}
     >
       <div
