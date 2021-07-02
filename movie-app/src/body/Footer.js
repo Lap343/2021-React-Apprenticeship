@@ -62,7 +62,7 @@ const Footer = () => {
 
     return(
         <div className="footer">
-            <h2>The talents that brought you ToadTV</h2>
+            <h2 className="footer-title" >The talents that brought you ToadTV</h2>
             <div className="dev-container">
                 <div
                     className="profile-container"
